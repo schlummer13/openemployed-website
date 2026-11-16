@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenEmployed – Buchhaltung, Lohn & Personal. Selbst gehostet. Ohne Abo.</title>
+  <meta name="description" content="OpenEmployed ist Open-Source-Software für Selbstständige, UG und GmbH: Rechnungen, Buchhaltung, Lohn, Personal, Verträge und Steuern – selbst gehostet, GoBD-konform und ohne Abo.">
+  <link rel="canonical" href="https://openemployed.de/">
+  <link rel="icon" href="bilder/logo.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0d6662">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://openemployed.de/">
+  <meta property="og:title" content="OpenEmployed – Deine ganze Firma. Auf deinem Server. Ohne Abo.">
+  <meta property="og:description" content="Rechnungen, Buchhaltung, Lohn, Personal, Verträge und Steuern für Selbstständige, UG und GmbH – Open Source und GoBD-konform.">
+  <meta property="og:image" content="https://openemployed.de/bilder/dashboard-light.png">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="OpenEmployed Startseite">
+      <img src="bilder/logo.svg" alt="" width="36" height="36">
+      <span><b>Open</b><em>Employed</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="#funktionen">Funktionen</a>
+      <a href="#lohn">Lohn</a>
+      <a href="#sicherheit">Sicherheit</a>
+      <a href="#start">Installation</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-small" href="https://github.com/schlummer13/openemployed">GitHub</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="pill">Open Source · AGPL-3.0 · Version 0.9.0</span>
+      <h1>Deine ganze Firma.<br><span class="grad">Auf deinem Server.</span> Ohne Abo.</h1>
+      <p class="lead">Rechnungen, Buchhaltung, <b>Lohn</b>, Personal, Verträge und Steuern für Selbstständige, UG und GmbH –
+        in einem System, GoBD-konform und offen bis zur letzten Zeile.</p>
+      <div class="cta">
+        <a class="btn" href="#start">In 5 Minuten ausprobieren</a>
+        <a class="btn btn-ghost" href="https://github.com/schlummer13/openemployed">Quellcode auf GitHub</a>
+      </div>
+      <ul class="facts" aria-label="Kurzfakten">
+        <li><b>0 €</b><span>Lizenzkosten</span></li>
+        <li><b>100 %</b><span>deine Daten</span></li>
+        <li><b>~4 ms</b><span>Antwortzeit</span></li>
+        <li><b>445</b><span>automatische Tests</span></li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <figure class="shot">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="bilder/dashboard-dark.png">
+          <img src="bilder/dashboard-light.png" width="1600" height="1000" alt="Übersicht von OpenEmployed mit frei verfügbarem Kapital, Einrichtungsschritten und Steuerrücklagen (Demodaten)">
+        </picture>
+        <figcaption>Die Übersicht zeigt, was <b>wirklich</b> frei verfügbar ist – nach Umsatzsteuer, Ertragsteuer-Rücklage und offenen Rechnungen. (Demodaten)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Ein System statt fünf Abos</h2>
+        <p>Buchhaltungs-Abo, Lohnbüro, Signatur-Dienst, Zeiterfassung – und die Daten liegen überall verteilt.
+          In OpenEmployed wird jeder Euro genau einmal erfasst: vom Angebot über Rechnung und Zahlungseingang bis zur
+          Umsatzsteuer-Voranmeldung, zur Gehaltsabrechnung und zum DATEV-Export.</p>
+      </div>
+      <div class="grid3">
+        <article class="card"><div class="ico">🔒</div><h3>Deine Daten bleiben bei dir</h3>
+          <p>Läuft komplett auf deinem Server. Sogar die KI-Belegerkennung arbeitet lokal – kein Beleg verlässt das Haus.</p></article>
+        <article class="card"><div class="ico">🧾</div><h3>Lohn wie vom Finanzamt</h3>
+          <p>Lohnsteuer nach dem amtlichen Programmablaufplan 2026, gegen den BMF-Rechner geprüft.</p></article>
+        <article class="card"><div class="ico">⚡</div><h3>Schnell und stabil</h3>
+          <p>Übersicht in ~4 ms, 500 parallele Anfragen ohne Fehler, Healthchecks und Selbstheilung für jeden Dienst.</p></article>
+        <article class="card"><div class="ico">📜</div><h3>GoBD von Anfang an</h3>
+          <p>Unveränderbares Journal mit Hash-Kette, Audit-Protokoll, Aufbewahrungsfristen und revisionssicherer Spiegelung.</p></article>
+        <article class="card"><div class="ico">✍️</div><h3>Verträge rechtssicher</h3>
+          <p>Documenso ist automatisch verbunden. Das System prüft die Formvorschrift und schlägt den richtigen Weg vor.</p></article>
+        <article class="card"><div class="ico">🇩🇪</div><h3>Gemacht für Deutschland</h3>
+          <p>XRechnung, ZUGFeRD, Peppol, ELSTER, SEPA, DATEV, SKR03/04 und Feiertage aller Bundesländer – komplett auf Deutsch.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="funktionen">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Alles, was ein Unternehmen braucht</h2>
+        <p>Von der ersten Anfrage bis zum Jahresabschluss – ohne Medienbruch.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><h3>Vertrieb</h3><p>Pipeline von Lead über Angebot bis Vertrag, Angebote mit Online-Annahme, Abo-Verträge mit automatischer Abrechnung, Kundenportal.</p></div>
+        <div class="feature"><h3>Rechnungen</h3><p>E-Rechnung als XRechnung 3.0 und ZUGFeRD/Factur-X, Versand per E-Mail oder Peppol, Auslandskunden mit Reverse-Charge, Fremdwährungen mit EZB-Kurs, Mahnwesen.</p></div>
+        <div class="feature"><h3>Belege</h3><p>Belegpostfach per IMAP, Handy-Erfassung, Lieferanten-Regeln und lokale KI-Erkennung mit Ollama.</p></div>
+        <div class="feature"><h3>Buchhaltung</h3><p>Doppelte Buchführung SKR03/SKR04, Bankimport (CAMT, MT940, CSV, FinTS), Anlagen und AfA, DATEV-Import und -Export, Monats- und Jahresabschluss.</p></div>
+        <div class="feature"><h3>Steuern</h3><p>Umsatzsteuer-Voranmeldung mit ELSTER-Versand, Zusammenfassende Meldung, Dauerfristverlängerung, KSt- und GewSt-Vorauszahlungen, BWA mit Vorjahresvergleich.</p></div>
+        <div class="feature"><h3>Zahlungsverkehr</h3><p>SEPA-Überweisungen und -Lastschriften mit Mandatsverwaltung.</p></div>
+        <div class="feature"><h3>Personal</h3><p>Stempeluhr, Urlaub und Abwesenheiten, Feiertage im Kalender, Zeitkonto und Überstunden, On- und Offboarding, digitale Personalakte mit Vertragsvorlagen.</p></div>
+        <div class="feature"><h3>Archiv</h3><p>Revisionssicher mit Hash-Kette und Aufbewahrungsfristen, Volltextsuche, Spiegelung auf S3 mit Object Lock, WebDAV oder Festplatte, GoBD-Export mit Prüfskript.</p></div>
+        <div class="feature"><h3>Automatisierung</h3><p>Eingebaute Jobs plus eigene Workflows mit Bedingungen, E-Mail, Aufgaben, HTTP und Python in einer Sandbox, REST-API und signierte Webhooks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lohn">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Lohnabrechnung</span>
+        <h2>Gehälter abrechnen – ohne Lohnbüro</h2>
+        <p>Die Lohnsteuer wird nach dem <b>amtlichen Programmablaufplan 2026</b> berechnet und ist gegen den Rechner des
+          Bundesfinanzministeriums geprüft. Die Entgeltabrechnung enthält alle gesetzlichen Pflichtangaben.</p>
+        <ul class="checks">
+          <li>Festgehalt, Stundenlohn, Minijob, Midijob (Übergangsbereich) und Werkstudenten</li>
+          <li>Sonderzahlungen, Sachbezüge, Dienstwagen und steuerfreie Zuschüsse</li>
+          <li>Pfändung nach § 850c ZPO</li>
+          <li>DEÜV-Meldungen, Beitragsnachweise und Lohnsteuerbescheinigung</li>
+          <li>Automatische Lohnbuchung und Mitarbeiter-Portal für Abrechnungen</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="row"><span>Bruttolohn</span><b>3.500,00 €</b></div>
+        <div class="row"><span>Lohnsteuer (PAP 2026)</span><b>amtlich</b></div>
+        <div class="row"><span>Sozialversicherung</span><b>aktuelle Sätze</b></div>
+        <div class="row"><span>Meldungen</span><b>DEÜV · Beitragsnachweis</b></div>
+        <div class="row total"><span>Buchung</span><b>automatisch</b></div>
+        <p class="note">Beispielhafte Darstellung</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="sicherheit">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Sicher und nachvollziehbar</h2>
+        <p>Gebaut für Daten, bei denen Fehler teuer werden.</p>
+      </div>
+      <div class="grid3">
+        <article class="card"><h3>Least Privilege</h3><p>Getrennte Datenbankrollen für Migration, Anwendung und Festschreibung. Festgeschriebene Buchungen kann niemand mehr ändern.</p></article>
+        <article class="card"><h3>Moderne Anmeldung</h3><p>Google, Microsoft, OIDC oder E-Mail mit Passwort und Zwei-Faktor-Authentifizierung. Rollen für Geschäftsführung, Buchhaltung, Steuerberatung und Mitarbeiter.</p></article>
+        <article class="card"><h3>Datensicherung</h3><p>Tägliche, geprüfte Sicherung, Wiederherstellungsskript und Spiegelung auf externe Speicher mit Object Lock.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="start">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Installation</span>
+        <h2>In wenigen Minuten startklar</h2>
+        <p>Du brauchst nur Docker mit Compose, <code>make</code>, <code>openssl</code> und <code>python3</code>.
+          Ein kleiner Server mit 2–4 GB RAM reicht.</p>
+        <ul class="checks">
+          <li>Zum Ausprobieren mit Testpostfach und Demodaten</li>
+          <li>Für den Betrieb hinter nginx mit TLS – Anleitung in der Doku</li>
+          <li>Updates mit einem Befehl, Migrationen laufen automatisch</li>
+        </ul>
+      </div>
+      <div class="code" role="region" aria-label="Installationsbefehle">
+        <div class="code-head"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre><code><span class="c"># Herunterladen</span>
+git clone https://github.com/schlummer13/openemployed.git
+cd openemployed
+
+<span class="c"># Starten – mit Demodaten</span>
+make install-lokal
+make demo</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Technik, die man versteht</h2>
+        <p>Bewährte Bausteine, sauber getrennt.</p>
+      </div>
+      <ul class="stack">
+        <li><b>Next.js</b><span>Oberfläche</span></li>
+        <li><b>FastAPI</b><span>Backend</span></li>
+        <li><b>Rust</b><span>Festschreibung</span></li>
+        <li><b>PostgreSQL</b><span>Datenbank</span></li>
+        <li><b>Documenso</b><span>Signaturen</span></li>
+        <li><b>Ollama</b><span>lokale KI</span></li>
+        <li><b>Docker</b><span>Betrieb</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap narrow">
+      <h2 class="center">Häufige Fragen</h2>
+      <details><summary>Was kostet OpenEmployed?</summary>
+        <p>Nichts. Die Software ist Open Source unter der AGPL-3.0. Kosten entstehen nur für deinen Server.</p></details>
+      <details><summary>Für wen ist OpenEmployed gedacht?</summary>
+        <p>Für Selbstständige, UG und GmbH in Deutschland, die Rechnungen, Buchhaltung, Lohn und Personal an einem Ort haben und ihre Daten selbst kontrollieren möchten.</p></details>
+      <details><summary>Ersetzt OpenEmployed die Steuerberatung?</summary>
+        <p>Nein. OpenEmployed nimmt viel Arbeit ab und erzeugt DATEV-Exporte für die Kanzlei. Abschlüsse und Meldungen solltest du mit deiner Steuerberatung abstimmen und vor dem Produktivstart einen Monat parallel abrechnen.</p></details>
+      <details><summary>Wo liegen meine Daten?</summary>
+        <p>Ausschließlich auf deinem eigenen Server. Auch die KI-Belegerkennung läuft lokal; eine Cloud-KI ist optional und muss bewusst eingeschaltet werden.</p></details>
+      <details><summary>Ist OpenEmployed GoBD-konform?</summary>
+        <p>OpenEmployed ist nach den GoBD gebaut: unveränderbares Journal, Audit-Protokoll, Aufbewahrungsfristen und eine Vorlage für die Verfahrensdokumentation. Die Verfahrensdokumentation musst du für dein Unternehmen freigeben.</p></details>
+      <details><summary>Kann ich mitmachen?</summary>
+        <p>Sehr gern. Fehler und Ideen als Issue auf GitHub melden, Änderungen als Pull Request. Sicherheitslücken bitte vertraulich über GitHub melden.</p></details>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-band-inner">
+      <img src="bilder/logo.svg" alt="" width="64" height="64">
+      <h2>Bereit, die Abos zu kündigen?</h2>
+      <p>OpenEmployed ist kostenlos, offen und gehört dir.</p>
+      <div class="cta">
+        <a class="btn btn-light" href="https://github.com/schlummer13/openemployed">Auf GitHub ansehen</a>
+        <a class="btn btn-outline-light" href="https://github.com/schlummer13/openemployed/releases/latest">Neueste Version</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="brand small"><img src="bilder/logo.svg" alt="" width="24" height="24"><span><b>Open</b><em>Employed</em></span></div>
+    <p>Open Source unter der <a href="https://github.com/schlummer13/openemployed/blob/main/LICENSE">AGPL-3.0</a> ·
+      ersetzt keine Steuer- oder Rechtsberatung</p>
+    <nav aria-label="Fußzeile">
+      <a href="https://github.com/schlummer13/openemployed">GitHub</a>
+      <a href="https://github.com/schlummer13/openemployed/blob/main/docs/betrieb.md">Doku</a>
+      <a href="https://github.com/schlummer13/openemployed/blob/main/SECURITY.md">Sicherheit</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

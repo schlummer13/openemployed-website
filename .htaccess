@@ -1,0 +1,55 @@
+# OpenEmployed – openemployed.de (Apache)
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+RewriteEngine On
+
+# Immer HTTPS und ohne www (hinter einem Proxy wird X-Forwarded-Proto beachtet)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://openemployed.de%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# /index.html und /index → /
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index(\.html)?[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# .html-Endung entfernen: /seite.html → /seite
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# /seite intern auf seite.html abbilden
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+ErrorDocument 404 /index.html
+
+# Sicherheit
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "DENY"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+</IfModule>
+
+# Komprimierung und Zwischenspeicher
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+# Nur die Webseite ausliefern, keine Repo-Dateien
+<FilesMatch "^(README\.md|\.git.*)$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 /\.git
